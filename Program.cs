@@ -29,11 +29,14 @@ namespace SvnCommiterUI
 
             try
             {
-                client.GetStatus(path, out statuses);
-
-                foreach (var item in statuses)
+                bool bRetCode = client.GetStatus(path, out statuses);
+                if (bRetCode)
                 {
-                    result.Add(item.Uri.ToString());
+                    foreach (var item in statuses)
+                    {
+                        if (item.Uri != null)
+                            result.Add(item.Uri.ToString());
+                    }
                 }
             } 
             catch (Exception)

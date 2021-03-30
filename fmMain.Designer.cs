@@ -39,8 +39,10 @@
             // 
             // txtSearchPaths
             // 
+            this.txtSearchPaths.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchPaths.Location = new System.Drawing.Point(9, 10);
-            this.txtSearchPaths.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearchPaths.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchPaths.Multiline = true;
             this.txtSearchPaths.Name = "txtSearchPaths";
             this.txtSearchPaths.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -50,8 +52,11 @@
             // 
             // txtOutputSvnPaths
             // 
+            this.txtOutputSvnPaths.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOutputSvnPaths.Location = new System.Drawing.Point(9, 190);
-            this.txtOutputSvnPaths.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOutputSvnPaths.Margin = new System.Windows.Forms.Padding(2);
             this.txtOutputSvnPaths.Multiline = true;
             this.txtOutputSvnPaths.Name = "txtOutputSvnPaths";
             this.txtOutputSvnPaths.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -61,8 +66,9 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Location = new System.Drawing.Point(540, 10);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(77, 32);
             this.btnSearch.TabIndex = 2;
@@ -72,8 +78,10 @@
             // 
             // txtIgnore
             // 
+            this.txtIgnore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtIgnore.Location = new System.Drawing.Point(104, 149);
-            this.txtIgnore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.txtIgnore.Name = "txtIgnore";
             this.txtIgnore.Size = new System.Drawing.Size(418, 21);
             this.txtIgnore.TabIndex = 4;
@@ -81,8 +89,9 @@
             // 
             // btnIgnoreFilter
             // 
+            this.btnIgnoreFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIgnoreFilter.Location = new System.Drawing.Point(540, 141);
-            this.btnIgnoreFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIgnoreFilter.Margin = new System.Windows.Forms.Padding(2);
             this.btnIgnoreFilter.Name = "btnIgnoreFilter";
             this.btnIgnoreFilter.Size = new System.Drawing.Size(77, 32);
             this.btnIgnoreFilter.TabIndex = 6;
@@ -102,8 +111,9 @@
             // 
             // btnOpenBrowser
             // 
+            this.btnOpenBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenBrowser.Location = new System.Drawing.Point(540, 212);
-            this.btnOpenBrowser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpenBrowser.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenBrowser.Name = "btnOpenBrowser";
             this.btnOpenBrowser.Size = new System.Drawing.Size(77, 32);
             this.btnOpenBrowser.TabIndex = 8;
@@ -123,7 +133,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtOutputSvnPaths);
             this.Controls.Add(this.txtSearchPaths);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FmMain";
             this.Text = "Jx3SvnCommiterUI                   yefan1@kingsoft.com";
             this.ResumeLayout(false);
