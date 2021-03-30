@@ -58,6 +58,9 @@ namespace SvnCommiterUI
                 paths = Filter(m_svnPaths);
             }
 
+            if (paths == null)
+                return;
+
             foreach (var u in paths)
             {
                 txtOutputSvnPaths.Text += u + "\r\n";
@@ -85,6 +88,9 @@ namespace SvnCommiterUI
 
         string [] Filter(string[] input)
         {
+            if (input == null)
+                return null;
+
             var filter = from p in input where !(from i in m_Ignore where RegMatch(p, i) select i).Any() select p;
             return filter.ToArray();
         }
