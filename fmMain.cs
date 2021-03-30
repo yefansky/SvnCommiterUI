@@ -65,13 +65,22 @@ namespace SvnCommiterUI
         }
         static bool RegMatch(string Orign, string Reg)
         {
-            if (Regex.IsMatch(Reg, "\\*\\."))
+            try
             {
-                Reg = Reg.Substring(2);
-                return Orign.EndsWith(Reg);
-            }
+                if (Reg.Length <= 0)
+                return false;
 
-            return Regex.IsMatch(Orign, Reg);
+                if (Regex.IsMatch(Reg, "\\*\\."))
+                {
+                    Reg = Reg.Substring(2);
+                    return Orign.EndsWith(Reg);
+                }
+                return Regex.IsMatch(Orign, Reg);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         string [] Filter(string[] input)

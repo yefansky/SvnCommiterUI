@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmMain));
             this.txtSearchPaths = new System.Windows.Forms.TextBox();
             this.txtOutputSvnPaths = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -133,6 +134,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtOutputSvnPaths);
             this.Controls.Add(this.txtSearchPaths);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FmMain";
             this.Text = "Jx3SvnCommiterUI                   yefan1@kingsoft.com";
