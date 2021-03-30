@@ -36,6 +36,8 @@
             this.btnIgnoreFilter = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpenBrowser = new System.Windows.Forms.Button();
+            this.btnAddSearch = new System.Windows.Forms.Button();
+            this.btnClearSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSearchPaths
@@ -47,7 +49,7 @@
             this.txtSearchPaths.Multiline = true;
             this.txtSearchPaths.Name = "txtSearchPaths";
             this.txtSearchPaths.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtSearchPaths.Size = new System.Drawing.Size(513, 124);
+            this.txtSearchPaths.Size = new System.Drawing.Size(668, 124);
             this.txtSearchPaths.TabIndex = 0;
             this.txtSearchPaths.WordWrap = false;
             // 
@@ -61,7 +63,7 @@
             this.txtOutputSvnPaths.Multiline = true;
             this.txtOutputSvnPaths.Name = "txtOutputSvnPaths";
             this.txtOutputSvnPaths.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtOutputSvnPaths.Size = new System.Drawing.Size(513, 404);
+            this.txtOutputSvnPaths.Size = new System.Drawing.Size(668, 404);
             this.txtOutputSvnPaths.TabIndex = 1;
             this.txtOutputSvnPaths.WordWrap = false;
             // 
@@ -69,7 +71,7 @@
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSearch.Location = new System.Drawing.Point(540, 10);
+            this.btnSearch.Location = new System.Drawing.Point(695, 82);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(91, 32);
@@ -85,7 +87,7 @@
             this.txtIgnore.Location = new System.Drawing.Point(44, 149);
             this.txtIgnore.Margin = new System.Windows.Forms.Padding(2);
             this.txtIgnore.Name = "txtIgnore";
-            this.txtIgnore.Size = new System.Drawing.Size(478, 21);
+            this.txtIgnore.Size = new System.Drawing.Size(633, 21);
             this.txtIgnore.TabIndex = 4;
             this.txtIgnore.Text = "*.dll;*.lib;*.so;*.a;*.pdb;*.exe;*.log";
             // 
@@ -93,7 +95,7 @@
             // 
             this.btnIgnoreFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIgnoreFilter.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnIgnoreFilter.Location = new System.Drawing.Point(540, 142);
+            this.btnIgnoreFilter.Location = new System.Drawing.Point(695, 142);
             this.btnIgnoreFilter.Margin = new System.Windows.Forms.Padding(2);
             this.btnIgnoreFilter.Name = "btnIgnoreFilter";
             this.btnIgnoreFilter.Size = new System.Drawing.Size(91, 32);
@@ -117,7 +119,7 @@
             // 
             this.btnOpenBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenBrowser.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOpenBrowser.Location = new System.Drawing.Point(540, 212);
+            this.btnOpenBrowser.Location = new System.Drawing.Point(695, 212);
             this.btnOpenBrowser.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpenBrowser.Name = "btnOpenBrowser";
             this.btnOpenBrowser.Size = new System.Drawing.Size(91, 32);
@@ -126,11 +128,39 @@
             this.btnOpenBrowser.UseVisualStyleBackColor = true;
             this.btnOpenBrowser.Click += new System.EventHandler(this.btnOpenBrowser_Click);
             // 
+            // btnAddSearch
+            // 
+            this.btnAddSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddSearch.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAddSearch.Location = new System.Drawing.Point(695, 10);
+            this.btnAddSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddSearch.Name = "btnAddSearch";
+            this.btnAddSearch.Size = new System.Drawing.Size(91, 32);
+            this.btnAddSearch.TabIndex = 9;
+            this.btnAddSearch.Text = "...";
+            this.btnAddSearch.UseVisualStyleBackColor = true;
+            this.btnAddSearch.Click += new System.EventHandler(this.btnAddSearch_Click);
+            // 
+            // btnClearSearch
+            // 
+            this.btnClearSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearSearch.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClearSearch.Location = new System.Drawing.Point(695, 46);
+            this.btnClearSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearSearch.Name = "btnClearSearch";
+            this.btnClearSearch.Size = new System.Drawing.Size(91, 32);
+            this.btnClearSearch.TabIndex = 10;
+            this.btnClearSearch.Text = "清空";
+            this.btnClearSearch.UseVisualStyleBackColor = true;
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
+            // 
             // FmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 603);
+            this.ClientSize = new System.Drawing.Size(790, 603);
+            this.Controls.Add(this.btnClearSearch);
+            this.Controls.Add(this.btnAddSearch);
             this.Controls.Add(this.btnOpenBrowser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIgnoreFilter);
@@ -156,6 +186,8 @@
         private System.Windows.Forms.Button btnIgnoreFilter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOpenBrowser;
+        private System.Windows.Forms.Button btnAddSearch;
+        private System.Windows.Forms.Button btnClearSearch;
     }
 }
 

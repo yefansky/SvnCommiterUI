@@ -70,8 +70,8 @@ namespace SvnCommiterUI
         {
             try
             {
-                if (Reg.Length <= 0)
-                return false;
+                if (string.IsNullOrEmpty(Reg))
+                    return false;
 
                 if (Regex.IsMatch(Reg, "\\*\\."))
                 {
@@ -99,7 +99,7 @@ namespace SvnCommiterUI
         {
             m_Ignore = null;
 
-            if (txtIgnore.Text != null && txtIgnore.Text.Length > 0)
+            if (!string.IsNullOrEmpty(txtIgnore.Text))
             {
                 m_Ignore = txtIgnore.Text.Split(
                     new[] { ";", "," },
@@ -114,6 +114,26 @@ namespace SvnCommiterUI
         {
             fmBrowser f = new fmBrowser(txtOutputSvnPaths.Text);
             f.Show();
+        }
+
+        private void btnAddSearch_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!string.IsNullOrEmpty(dialog.SelectedPath))
+                {
+                    if (!string.IsNullOrEmpty(txtSearchPaths.Text) && !txtSearchPaths.Text.EndsWith("\n"))
+                        txtSearchPaths.Text += "\r\n";
+                    txtSearchPaths.Text += dialog.SelectedPath;
+                }
+            }
+        }
+
+        private void btnClearSearch_Click(object sender, EventArgs e)
+        {
+            txtSearchPaths.Text = "";
         }
     }
 }
