@@ -75,7 +75,7 @@ namespace SvnCommiterUI
 
                 if (Regex.IsMatch(Reg, "\\*\\."))
                 {
-                    Reg = Reg.Substring(2);
+                    Reg = Reg.Substring(1);
                     return Orign.EndsWith(Reg);
                 }
                 return Regex.IsMatch(Orign, Reg);
