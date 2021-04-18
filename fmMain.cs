@@ -135,5 +135,16 @@ namespace SvnCommiterUI
         {
             txtSearchPaths.Text = "";
         }
+
+        private void FmMain_Load(object sender, EventArgs e)
+        {
+            txtSearchPaths.Text = Properties.Settings.Default.SearchPaths;
+        }
+
+        private void FmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.SearchPaths = txtSearchPaths.Text;
+            Properties.Settings.Default.Save();
+        }
     }
 }
